@@ -27,7 +27,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
   } = experience;
 
   return (
-    <div className="flex gap-5 p-5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-sm">
+    <div className="flex gap-5 p-5">
       {/* Image */}
       <div className="shrink-0">
         <Image

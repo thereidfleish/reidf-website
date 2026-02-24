@@ -1,5 +1,6 @@
 export type MediaItem =
     | { type: "image"; src: string }
+    | { type: "video"; src: string }
     | { type: "carousel"; slides: { src: string }[] };
 
 export interface ProjectDetail {
@@ -304,6 +305,126 @@ export const projectDetails: ProjectDetail[] = [
                 type: "image",
                 src: "/projects/2638-website/4.png",
             },
+        ]
+    },
+    {
+        id: "robotics-cad",
+        longDescription: `
+    <p>The top slideshow contains many of my CAD designs. These may look simple, but in reality they take tons of careful design, planning, and testing before they make it onto the final robot.</p>
+    <p>The bottom slideshow contains pictures of some of these designs on the final robot. Though I was involved in CAD more than the fabrication of my designs, I have also done some of the fabrication well.</p>
+    <p>Update 9/27/21: I miss roboticssssss</p>
+    `,
+        media: [
+            {
+                type: "carousel",
+                slides: [
+                    { src: "/projects/robotics-cad/1.png" },
+                    { src: "/projects/robotics-cad/2.png" },
+                    { src: "/projects/robotics-cad/3.png" },
+                    { src: "/projects/robotics-cad/4.png" },
+                    { src: "/projects/robotics-cad/5.png" },
+                    { src: "/projects/robotics-cad/6.png" },
+                ],
+            },
+            {
+                type: "carousel",
+                slides: [
+                    { src: "/projects/robotics-cad/7.jpg" },
+                    { src: "/projects/robotics-cad/8.jpg" },
+                    { src: "/projects/robotics-cad/9.jpg" },
+                    { src: "/projects/robotics-cad/10.jpg" },
+                    { src: "/projects/robotics-cad/11.jpg" },
+                    { src: "/projects/robotics-cad/12.jpg" },
+                    { src: "/projects/robotics-cad/13.jpg" },
+                ],
+            },
+        ]
+    },
+    {
+        id: "videowall",
+        longDescription: `
+    <p>The plan was to hang them up on the middle school hallway to play content across both screens. But even more so, the challenge was getting them to sync with each other so a movie could move across both screens, or be half-and-half, or any combination of fractions. Not only that, but we wanted to schedule content to play at certain times. So it was my job how to figure out how to get all this to work.</p>
+    <p>I thought it would be easy. But oh boy, far from easy it was. After hanging the monitors, I realized that I would need to connect to them within the school's network. Turns out, the school blocks all such connections. So away on the phone with IT I went.</p>
+    <p>Next was installing the software for the monitors — MagicInfo. This took DAYS to do, since I needed to install Bootcamp on a few Macs before I finally found one that would work (there were no PCs there and MagicInfo is only a PC app). Then, after installing, I realized I had installed the wrong version. Uninstalling and reinstalling did the trick.</p>
+    <p>After a week or so figuring all that out, it was time to figure out how to connect the screens to each other. We had numerous other firewall issues with this, and soon a licensing issue with the monitors as well, so I found myself on the phone with Samsung for hours for a few days straight. Finally though, everything was working! I then taught the other members of the TV studio how to actually work the thing.</p>
+    <p>School had started, and things went really well with the monitors…Until just a month later when the monitors disconnected. Back to the studio I went, calling Samsung again, and realized that I needed to update the software once more.</p>
+    <p>It was good for the year, but then broke again by the start of next summer. It didn't matter, because the studio had ordered TWO MORE huge monitors for me to add to the other two!! The installation wasn't hard, but it was extremely hard to actually make them sync. Hours on the phone with Samsung, another software update, another licensing issue later, and finally things were working again.</p>
+    <p>But it didn't stop there. Numerous issues happened again when the school changed their firewall system. Now I needed to work with IT again to make it work, which ended up breaking other stuff meaning I had to do a full uninstall and reinstall AGAIN!</p>
+    <p>Since then, it's been great, thankfully. Honestly, the software and hardware is pretty bad, but it did make for some very fun tinkering around. It was cool to learn all about undertaking such a project — one which looks simple but ends up having many issues.</p>
+    `,
+        media: [
+            { type: "image", src: "/projects/videowall/1.jpg" },
+            { type: "image", src: "/projects/videowall/2.jpg" },
+            {
+                type: "video",
+                src: "/projects/videowall/3.mov",
+            }
+        ]
+    },
+    {
+        id: "synology",
+        longDescription: `
+    <p>Up until then, I stored all my files on external hard drives. If I wanted to access something on another computer, I would have to close my work on one, unplug the hard drive, plug it into the other computer, and then resume work. This was a nightmare, and I soon realized that a NAS would be able to solve this problem for me.</p>
+    <p>So I went to work researching. After days of research, I came across a YouTube video from Lon.TV reviewing the WD My Cloud NAS product. I thought it was pretty cool and also not too expensive so I went ahead and bought one.</p>
+    <p>I initially liked it a lot, and found it quite useful. Yet, I soon began to come up with an idea: wouldn't it be nice to use this server for my robotics team to store our CAD files? Given that we couldn't work on them from home, I thought this was a brilliant idea.</p>
+    <p>So I loaded up the WD My Cloud app on the school computers to allow connection to my device, aannndddd...I needed an administrator to install.</p>
+    <p>I realized that wasn't going to work. After contacting the head of technology for the district to grant me permission and being denied, I looked for another way.</p>
+    <p>I remembered that in one of Lon.TV's videos he compared the WD My Cloud to something called a Synology NAS. He kept saying that the Synology was his favorite and that it had better features. So I went back to his channel to look for Synology videos, and sure enough, there were plenty.</p>
+    <p>Upon watching one of them, I discovered a feature called WebDAV. After some research, I realized that you could connect to this directly within the Windows file explorer and would be perfect for use at school since it would mean I wouldn't need to get admin permissions to install something.</p>
+    <p>But before I jumped ship from WD to Synology, I wanted to test the WebDAV capability out first. I went ahead and bought myself a little Apple AirPort Express wireless router and hooked it up to an old iMac that I configured macOS Server on (thanks to Todd Olthoff's videos on YouTube for helping me out with this). After days of getting that to work, I went to school for the moment of truth…and WebDAV worked!</p>
+    <p>So immediately I transferred everything on my WD to an external hard drive and set out to return it. Luckily I had bought it on Amazon during the period where they were giving extended return windows due to the holidays, so I just barely made it within 3 months by the end of February. After the return was successful, I bought my Synology DS 218j.</p>
+    <p>Setting it up wasn't too bad, and when I finally saw all the features it had, I realized why Lon had liked this so much. You could just do so much with it, from hosting a website to even hosting a chat room.</p>
+    <p>But here's where the hard part came — setting it up. This took weeks, and in those weeks I spent hours each day learning about domain names, SSL, HTTP protocols, DNS records, DDNS, port forwarding, IP Addresses, and so much more. But finally, in the end, I was able to connect server.reidf.net:8080 to WebDAV and get it to work on the school computers. The CAD server was finally working, and it was instantly a huge help for our team. We still use it to this day! I also began to use it for other things like hosting some websites as well as general NAS storage.</p>
+    <p>Overall, this whole experience was very challenging at times but also super fun, and I learned a lot just from doing it. There were countless problems I ran into along the way, but ultimately, it works great. It's been about six years since I did this from when I'm editing this now (1/21/24), and I couldn't be happier with it. I've also helped two of my friends set up Synologys of their very own!</p>
+    `,
+        media: [
+            { type: "image", src: "/projects/synology/1.jpg" },
+        ]
+    },
+    {
+        id: "pancreatic-cancer-project",
+        longDescription: `
+    <p>Sounds ambitious, right? It was for me at the time since I only had some experience with machine learning. I started by looking for a dataset to use (because hey, that’s the most important thing) and found one that was public and free for anyone to use — the IPUMS dataset. I started researching variables that were risk factors of pancreatic cancer and made sure to include them in the dataset. That was the easy part. The harder part was actually making these variables work with my model. I won’t get into the details here since they are fairly complicated, but essentially the models that I was using needed to have a clean, balanced dataset. That meant that it needed to be free of missing values and relatively balanced (an equal ratio of pancreatic cancer to non-pancreatic cancer cases). This took months of revisions, reworkings, re-codings, and developing methods to artificially up-sample the dataset, but eventually I was able to develop a somewhat perfect dataset that would be ready to feed into the models.</p>
+    <p>Now, let's talk about the models. I essentially had to teach myself how to train an Artificial Neural Network and Logistic Regression model using Python in TensorFlow. Using YouTube, TowardsDataScience, StackOverflow, TensorFlow’s own tutorials, and many, many, many other websites and resources, I was finally able to run my models for the first time. Comparatively, that was the easy part. The harder part was actually getting the models to perform well. This took another month or so (it went quicker because this part occurred during the COVID-19 pandemic, so I had more time on my hands) of testing every single possible combination of batch size, activation function, pre-processing technique, feature column, number of layers, number of neurons in each layer, early-stopping method, and all other hyperparameters in order to get the best result.</p>
+    <p>In the end though, after many months of work, I had a working product (if you would like to learn about every specific step in my project, you may email me and I would be more than happy to discuss) — I was finally done!</p>
+    <p>…Ehhhh no I wasn’t. I really wanted to improve this project significantly during the summer entering 12th grade. The project was far from perfect, mainly in regards to my dataset, and it didn’t have a useful way for patients to actually use the model. So, to solve those problems, I had to set out on two new paths – requesting better, additional datasets and embedding the model within a mobile app.</p>
+    <p>The former was the harder of the two. I had sent out 20 or so emails to professors and organizations around the country, receiving a response from only two, saying no. Yet one afternoon, I received an email back from an organization called PanCAN, saying that they would be able to send me a dataset. I had to fill out a TON of paperwork for them, but I was able to obtain a dataset from them, nonetheless. In addition, I had applied for a dataset from PLCO, in which I had succeeded. This was an overly time-consuming process (I guess I had not realized how much logistics would be involved), but I am satisfied with my progress. I think I have a pretty decent dataset now.</p>
+    <p>The 2nd part was much more fun. I had created a few apps prior (see the apps/websites page on my website), and I was excited to develop the new models in CreateML and place them in an app using CoreML (I had originally planned to convert the TensorFlow models to CoreML using a tool called coremltools, but it did not work for my scenarios). I won’t go into too much detail here, but I created Decision Trees, Random Forest, Boosted Trees, Logistic Regression, and Support Vector Machine models, which weren't relatively hard to do. All I needed to do was some intuitive UI design and to work around the quirks of CreateML (for instance, I had to write a program in Python just to parse results from CreateML in order to calculate an AUC value). In addition, I investigated the effects of including depression information in the models, as well as the importance of the risk factors. As of November 2020, I have completed the project and submitted it to the Regeneron STS Competition. If you would like to see my findings, read my paper below!</p>
+    `,
+        media: [
+            {
+                type: "carousel",
+                slides: [
+                    { src: "/projects/pancreatic-cancer-project/1.png" },
+                    { src: "/projects/pancreatic-cancer-project/2.png" },
+                    { src: "/projects/pancreatic-cancer-project/3.png" },
+                    { src: "/projects/pancreatic-cancer-project/4.png" },
+                    { src: "/projects/pancreatic-cancer-project/5.png" },
+                ],
+            },
+            { type: "image", src: "/projects/pancreatic-cancer-project/6.png" },
+            { type: "image", src: "/projects/pancreatic-cancer-project/7.png" },
+            { type: "image", src: "/projects/pancreatic-cancer-project/8.png" },
+            { type: "image", src: "/projects/pancreatic-cancer-project/9.png" },
+            { type: "image", src: "/projects/pancreatic-cancer-project/10.png" },
+        ]
+    },
+    {
+        id: "planarian-blue-light",
+        longDescription: `
+    <p>This was definitely a fun project. I had worked with someone in my class named Irene, and each day we would take care of the planarians by feeding them and changing their water. In order to track their movement, or "sleep", I came up with the idea to film them at a time during the night after being subjected to either blue or red light for 30 minutes.</p>
+    <p>We each built our own separate contraption at home to conduct this project and we even took planarians home with us each week to conduct the experiment!</p>
+    <p>Afterward, I took the videos we we recorded and ran them through a program called WormLab, which calculated their velocity during the time interval. It was a very time consuming process as I needed to process about 30 examples consisting of 30 minutes of footage each.</p>
+    <p>We did have a few problems along the way. We actually did a trial of this during the April break; however, all of our planarians happened to die during that break! In addition, we had planned to use a software called "ptracker" to measure the velocity of the planarians at first, but unfortunately, it did not work as expected. So we kind of scrambled at the last minute and found WormLab, which worked very well.</p>
+    <p>Overall, this was a simple yet fun first project for me. It will always be in my memories, and it was a great first dive into the world of research.</p>
+    `,
+        media: [
+            { type: "image", src: "/projects/planarian-blue-light/1.jpg" },
+            { type: "image", src: "/projects/planarian-blue-light/2.jpg" },
+            { type: "image", src: "/projects/planarian-blue-light/3.jpg" },
+            { type: "image", src: "/projects/planarian-blue-light/4.png" },
+            { type: "image", src: "/projects/planarian-blue-light/5.png" },
+            { type: "image", src: "/projects/planarian-blue-light/6.png" },
         ]
     },
 ];

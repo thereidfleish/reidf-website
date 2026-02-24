@@ -84,6 +84,11 @@ export default function ProjectMedia({ media }: { media: MediaItem[] }) {
         if (item.type === "image")
           return <Image key={i} src={item.src} alt="" width={900} height={600}
             style={{ width: "100%", height: "auto", objectFit: "contain" }} className="rounded-xl" />;
+        if (item.type === "video")
+          return (
+            <video key={i} src={item.src} controls
+              style={{ width: "100%", height: "auto" }} className="rounded-xl" />
+          );
         if (item.type === "carousel")
           return <MediaCarousel key={i} slides={item.slides} />;
       })}
