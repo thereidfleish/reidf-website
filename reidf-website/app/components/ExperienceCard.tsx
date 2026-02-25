@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Experience } from "../data/experience";
 import type { Project } from "../data/projects";
-import { allTypeLabels, allTypeColors } from "../lib/typeUtils";
-import TechStackPills from "./TechStackPills";
 import LinkButtons from "./LinkButtons";
 
 type CardItem = Experience | Project;
@@ -21,13 +19,11 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
     dates,
     location,
     description,
-    techStack,
     links,
-    type,
   } = experience;
 
   return (
-    <div className="flex gap-5 p-5">
+    <div className="flex gap-5 py-5">
       {/* Image */}
       <div className="shrink-0">
         <Image
@@ -56,11 +52,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                   title
                 )}
               </h3>
-              <span
-                className={`inline-flex items-center h-5 text-xs leading-none font-medium px-2 rounded-full relative -top-px ${allTypeColors[type]}`}
-              >
-                {allTypeLabels[type]}
-              </span>
+
             </div>
             {position && (
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
@@ -83,7 +75,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           />
         )}
 
-        <TechStackPills techStack={techStack} />
+
         <LinkButtons links={links} />
       </div>
     </div>

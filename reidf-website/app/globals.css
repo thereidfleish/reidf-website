@@ -49,6 +49,11 @@ a:not([class]):hover {
   padding: 1rem 1rem;
 }
 
+.content-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 nav a,
 nav a:hover {
   color: inherit;

@@ -3,23 +3,11 @@
 import { useState, useMemo } from "react";
 import type { Experience } from "../data/experience";
 import type { Project } from "../data/projects";
-import { allTypeLabels, allTypeColors } from "../lib/typeUtils";
+import { allTypeLabels } from "../lib/typeUtils";
 import ExperienceCard from "./ExperienceCard";
-import Button from "./Button";
+import { parseDateValue } from "../lib/dateUtils";
 
 type CardItem = Experience | Project;
-
-const MONTHS: Record<string, number> = {
-  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
-  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
-};
-
-function parseDateValue(dates: string): number {
-  const start = dates.split("-")[0].trim();
-  if (start === "Present") return Date.now();
-  const [mon, year] = start.split(" ");
-  return parseInt(year) * 12 + (MONTHS[mon] ?? 0);
-}
 
 interface ExperienceListProps {
   experiences: CardItem[];
@@ -82,8 +70,8 @@ export default function ExperienceList({
                     onClick={() => toggleType(t)}
                     className={`text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer ${
                       isActive
-                        ? allTypeColors[t]
-                        : "bg-zinc-100 text-zinc-400 dark:bg-zinc-800 dark:text-zinc-500"
+                        ? "bg-zinc-800 text-white dark:bg-white dark:text-black"
+                        : "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
                     }`}
                   >
                     {allTypeLabels[t]}
@@ -91,28 +79,22 @@ export default function ExperienceList({
                 );
               })}
               <div className="w-px h-5 bg-zinc-200 dark:bg-zinc-700 mx-1 self-center" />
-              <Button
-                shape="pill"
-                size="sm"
-                colorset="secondary"
-                variant="outline"
+              <button
                 onClick={() => setNewestFirst((p) => !p)}
+                className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
               >
                 {newestFirst ? "Newest First" : "Oldest First"}
-              </Button>
+              </button>
             </div>
           </>
         )}
         {!showFilter && (
-          <Button
-            shape="pill"
-            size="sm"
-            colorset="secondary"
-            variant="outline"
+          <button
             onClick={() => setNewestFirst((p) => !p)}
+            className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
           >
             {newestFirst ? "Newest First" : "Oldest First"}
-          </Button>
+          </button>
         )}
       </div>
 

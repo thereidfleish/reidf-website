@@ -22,7 +22,7 @@ export default function Home() {
         {/* Right column - bio text */}
         <div className="flex flex-col gap-4">
           <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-            I'm passionate about creatively applying my skills in iOS and full-stack web development, IT, and more to delight users, improve processes, and empower a team.  I'm both a leader and independent contributor who is observant, dedicated, and not afraid to take risks to make our world a better place.
+            I'm passionate abougrrdgrgdt creatively applying my skills in iOS and full-stack web development, IT, and more to delight users, improve processes, and empower a team.  I'm both a leader and independent contributor who is observant, dedicated, and not afraid to take risks to make our world a better place.
           </p>
           <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
             I've had numerous experiences and worked on many projects, and I invite you to explore them throughout my website!

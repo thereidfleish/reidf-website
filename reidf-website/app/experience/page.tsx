@@ -7,7 +7,7 @@ export default function ExperiencePage() {
   );
 
   return (
-    <div>
+    <div className="content-narrow">
       <h1 className="text-3xl font-bold mb-8">Experience</h1>
       <ExperienceList
         experiences={nonProjectExperiences}

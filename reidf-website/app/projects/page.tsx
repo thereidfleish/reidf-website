@@ -3,7 +3,7 @@ import ExperienceList from "../components/ExperienceList";
 
 export default function ProjectsPage() {
   return (
-    <div>
+    <div className="content-narrow">
       <h1 className="text-3xl font-bold mb-8">Projects</h1>
       <ExperienceList
         experiences={projects}

@@ -145,7 +145,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "spotify",
-    image: "/logos/spotify.png",
+    image: "/logos/spotify.jpg",
     title: "Spotify",
     position: "iOS Engineer Intern",
     dates: "Jun 2024 - Aug 2024",
