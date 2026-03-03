@@ -9,8 +9,8 @@ export default function VideoCard({ video }: VideoCardProps) {
   const youtubeUrl = `https://www.youtube.com/watch?v=${youtubeId}`;
 
   return (
-    <div className="flex gap-5 py-5 items-start">
-      {/* Text */}
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 py-3 sm:items-start">
+      {/* Title + date + description — left column on desktop, top on mobile */}
       <div className="flex flex-col gap-2 min-w-0 flex-1">
         <h3 className="text-lg font-bold leading-snug">
           <a
@@ -29,17 +29,6 @@ export default function VideoCard({ video }: VideoCardProps) {
             dangerouslySetInnerHTML={{ __html: description }}
           />
         )}
-      </div>
-
-      {/* Embedded YouTube video */}
-      <div className="shrink-0 w-80 aspect-video rounded-lg overflow-hidden">
-        <iframe
-          src={`https://www.youtube.com/embed/${youtubeId}`}
-          title={title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full"
-        />
       </div>
     </div>
   );

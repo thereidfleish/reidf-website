@@ -1,6 +1,5 @@
 import { projects } from "../../data/projects";
 import { projectDetails } from "../../data/projectdetails";
-import { allTypeLabels, allTypeColors } from "../../lib/typeUtils";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import TechStackPills from "../../components/TechStackPills";
@@ -34,14 +33,7 @@ export default async function ProjectDetailPage({
           className="rounded-xl object-contain shrink-0"
         />
         <div className="flex flex-col gap-1.5">
-          <div className="flex flex-wrap items-center gap-2">
-            <h1 className="text-2xl font-bold leading-none">{project.title}</h1>
-            <span
-              className={`inline-flex items-center h-5 text-xs leading-none font-medium px-2 rounded-full ${allTypeColors[project.type]}`}
-            >
-              {allTypeLabels[project.type]}
-            </span>
-          </div>
+          <h1 className="text-2xl font-bold leading-none">{project.title}</h1>
           {project.position && (
             <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
               {project.position}
@@ -68,6 +60,13 @@ export default async function ProjectDetailPage({
             />
           )}
 
+          {/* Media — visible only on small screens, between short and long description */}
+          {detail?.media && detail.media.length > 0 && (
+            <div className="md:hidden">
+              <ProjectMedia media={detail.media} />
+            </div>
+          )}
+
           {detail?.longDescription && (
             <div
               className="rich-text leading-relaxed text-zinc-700 dark:text-zinc-300"
@@ -76,9 +75,9 @@ export default async function ProjectDetailPage({
           )}
         </div>
 
-        {/* Right column: media */}
+        {/* Right column: media — visible only on md+ */}
         {detail?.media && detail.media.length > 0 && (
-          <div className="flex-1 min-w-0">
+          <div className="hidden md:block flex-1 min-w-0">
             <ProjectMedia media={detail.media} />
           </div>
         )}

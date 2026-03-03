@@ -44,7 +44,7 @@ export const projects: Project[] = [
         id: "morrison",
         image: "/logos/morrison.jpg",
         title: "Morrison Dining Utensil Separation Bins",
-        dates: "Apr 2024 - Present",
+        dates: "Sep 2022 - May 2025",
         description: "I saw a huge sustainability problem in many dining halls on Cornell's campus: the utilization of disposable paper dishes and plastic utensils. This was particularly an issue in Morrison Dining, the brand-new largest dining hall on campus, which struggled to utilize reusable dishes and utensils due to understaffing.",
         techStack: experiences.find((e) => e.id === "rsls")!.techStack,
         links: [

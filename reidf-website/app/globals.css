@@ -62,6 +62,8 @@ nav a:hover {
 
 .rich-text a { color: #2563eb; text-decoration: underline; }
 .rich-text a:hover { color: #1d4ed8; }
+.rich-text a.hidden-link { color: transparent !important; text-decoration: none; }
+.rich-text a.hidden-link:hover { color: #3b82f6 !important; }
 .rich-text strong, .rich-text b { font-weight: 600; }
 .rich-text em, .rich-text i { font-style: italic; }
 .rich-text ul { list-style: disc; padding-left: 1.25rem; margin-top: 0.25rem; }

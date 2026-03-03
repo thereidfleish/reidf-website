@@ -22,12 +22,12 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-8">
+    <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 px-4">
       {tabs.map((tab) => (
         <Link
           key={tab.href}
           href={tab.href}
-          className={`text-lg transition-colors ${
+          className={`text-base sm:text-lg transition-colors ${
             isActive(tab, pathname)
               ? "font-bold text-zinc-900 dark:text-zinc-50"
               : "font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
