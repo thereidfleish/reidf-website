@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Script from "next/script";
+import { versions } from "../data/changelog";
 
 const LINK_CLASS = "text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors underline-offset-2 hover:underline";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const latest = versions[0];
 
   return (
     <footer className="border-t border-zinc-200 dark:border-zinc-800 mt-4">
@@ -30,8 +32,8 @@ var sc_text=2;
         <p className="leading-6">
           © {year} Reid Fleishman<br />
           <a href="mailto:reidfleishman5@gmail.com" className={LINK_CLASS}>reidfleishman5@gmail.com</a><br />
-          Website last updated: 2/4/25<br />
-          Version 3.6.2 —{" "}
+          Website last updated: {latest.date}<br />
+          Version {latest.version} —{" "}
           <Link href="/changelog" className={LINK_CLASS}>view changelog</Link>
         </p>
 
