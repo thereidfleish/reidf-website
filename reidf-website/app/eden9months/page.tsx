@@ -14,7 +14,7 @@ export default function Eden9MonthsPage() {
       </h3>
 
       <Image
-        src="https://server.reidf.net/reidf_files/other/eden9monthsreward"
+        src="/other/eden9monthsreward.jpg"
         alt="Eden 9 Months Reward"
         width={800}
         height={600}

@@ -77,7 +77,7 @@ export default function MammaMiaPage() {
           {songs.map((song) => (
             <li key={song.file}>
               <a
-                href={`https://reidf.net/mm/${song.file}.mp3`}
+                href={`https://server.reidf.net/reidf_files/mm/${song.file}.mp3`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

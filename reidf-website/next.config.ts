@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/reiden",
+        destination: "https://server.reidf.net/reidf_files/reiden",
+        permanent: false,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

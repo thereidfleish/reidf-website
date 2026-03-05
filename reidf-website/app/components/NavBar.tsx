@@ -15,7 +15,8 @@ function isActive(tab: (typeof tabs)[number], pathname: string) {
   if ("activeFor" in tab && tab.activeFor) {
     return tab.activeFor.some((p) => pathname === p || pathname.startsWith(p + "/"));
   }
-  return pathname === tab.href;
+  if (tab.href === "/") return pathname === "/";
+  return pathname === tab.href || pathname.startsWith(tab.href + "/");
 }
 
 export default function NavBar() {

@@ -30,6 +30,17 @@ export default function VideoCard({ video }: VideoCardProps) {
           />
         )}
       </div>
+
+      {/* Embedded YouTube video */}
+      <div className="shrink-0 w-full sm:w-80 aspect-video rounded-lg overflow-hidden">
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+      </div>
     </div>
   );
 }
