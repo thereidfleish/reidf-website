@@ -14,7 +14,7 @@ export default function PrivacyPolicyLayout({
       <div className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold">{title}</h1>
       </div>
-      <div className="flex flex-col gap-6 text-zinc-700 dark:text-zinc-300 leading-relaxed">
+      <div className="flex flex-col gap-6 text-zinc-700 leading-relaxed">
         {children}
       </div>
     </div>
@@ -36,7 +36,7 @@ export function PolicySection({
 
   return (
     <section className="flex flex-col gap-3">
-      <Tag className={`text-zinc-900 dark:text-zinc-100 ${sizeClass}`}>
+      <Tag className={`text-zinc-900 ${sizeClass}`}>
         {heading}
       </Tag>
       <div className="flex flex-col gap-3">{children}</div>
@@ -53,3 +53,4 @@ export function PolicyList({ items }: { items: ReactNode[] }) {
     </ul>
   );
 }
+

@@ -15,11 +15,11 @@ export default function ChangelogPage() {
           <div key={v.version} className="flex flex-col gap-1.5">
             <h2 className="text-base font-bold">
               Version {v.version}{" "}
-              <span className="font-normal text-zinc-500 dark:text-zinc-400">
+              <span className="font-normal text-zinc-500">
                 - {v.date}
               </span>
             </h2>
-            <ul className="flex flex-col gap-0.5 text-sm text-zinc-700 dark:text-zinc-300">
+            <ul className="flex flex-col gap-0.5 text-sm text-zinc-700">
               {v.changes.map((c: ChangeItem, i: number) =>
                 typeof c === "string" ? (
                   <li key={i} className="flex gap-2">
@@ -50,3 +50,4 @@ export default function ChangelogPage() {
     </div>
   );
 }
+

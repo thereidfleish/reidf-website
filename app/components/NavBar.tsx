@@ -30,8 +30,8 @@ export default function NavBar() {
           href={tab.href}
           className={`text-base sm:text-lg transition-colors ${
             isActive(tab, pathname)
-              ? "font-bold text-zinc-900 dark:text-zinc-50"
-              : "font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+              ? "font-bold text-zinc-900"
+              : "font-medium text-zinc-600 hover:text-zinc-900"
           }`}
         >
           {tab.label}
@@ -40,3 +40,4 @@ export default function NavBar() {
     </nav>
   );
 }
+

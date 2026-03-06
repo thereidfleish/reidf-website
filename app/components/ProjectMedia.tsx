@@ -7,7 +7,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { MediaItem } from "../data/projectdetails";
 
 const navBtn =
-  "absolute top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 dark:bg-zinc-800/80 shadow flex items-center justify-center text-zinc-700 dark:text-zinc-200 hover:bg-white dark:hover:bg-zinc-700 transition-colors cursor-pointer";
+  "absolute top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 shadow flex items-center justify-center text-zinc-700 hover:bg-white transition-colors cursor-pointer";
 
 function MediaCarousel({ slides }: { slides: { src: string }[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -67,7 +67,7 @@ function MediaCarousel({ slides }: { slides: { src: string }[] }) {
         <div className="flex justify-center gap-2">
           {slides.map((_, i) => (
             <button key={i} onClick={() => emblaApi?.scrollTo(i)}
-              className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${i === selectedIndex ? "bg-zinc-700 dark:bg-zinc-200" : "bg-zinc-300 dark:bg-zinc-600"}`}
+              className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${i === selectedIndex ? "bg-zinc-700" : "bg-zinc-300"}`}
               aria-label={`Go to slide ${i + 1}`} />
           ))}
         </div>
@@ -95,3 +95,4 @@ export default function ProjectMedia({ media }: { media: MediaItem[] }) {
     </div>
   );
 }
+

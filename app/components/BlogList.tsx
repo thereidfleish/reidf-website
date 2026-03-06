@@ -28,14 +28,14 @@ export default function BlogList({ blogs }: { blogs: Blog[] }) {
     <div className="flex flex-col gap-6">
       <button
         onClick={() => setNewestFirst((p) => !p)}
-        className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400 self-start"
+        className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 hover:bg-zinc-200 self-start"
       >
         {newestFirst ? "Newest First" : "Oldest First"}
       </button>
       <div className="flex flex-col gap-10">
         {grouped.map(([year, entries]) => (
           <div key={year} className="flex flex-col gap-2">
-            <h2 className="text-xl font-bold text-zinc-800 dark:text-zinc-200">{year}</h2>
+            <h2 className="text-xl font-bold text-zinc-800">{year}</h2>
             <div className="flex flex-col gap-10 sm:gap-4">
               {entries.map((blog) => (
                 <BlogCard key={blog.id} blog={blog} />
@@ -47,3 +47,4 @@ export default function BlogList({ blogs }: { blogs: Blog[] }) {
     </div>
   );
 }
+

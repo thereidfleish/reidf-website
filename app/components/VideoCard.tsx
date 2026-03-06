@@ -22,10 +22,10 @@ export default function VideoCard({ video }: VideoCardProps) {
             {title}
           </a>
         </h3>
-        <span className="text-sm font-semibold text-zinc-500 dark:text-zinc-400">{dates}</span>
+        <span className="text-sm font-semibold text-zinc-500">{dates}</span>
         {description && (
           <div
-            className="rich-text text-sm leading-relaxed text-zinc-700 dark:text-zinc-300"
+            className="rich-text text-sm leading-relaxed text-zinc-700"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         )}
@@ -44,3 +44,4 @@ export default function VideoCard({ video }: VideoCardProps) {
     </div>
   );
 }
+

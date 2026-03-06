@@ -7,3 +7,4 @@ export type CardItem = Experience | Project;
 
 export const allTypeLabels: Record<string, string> = { ...expTypeLabels, ...projectTypeLabels };
 export const allTypeColors: Record<string, string> = { ...expTypeColors, ...projectTypeColors };
+

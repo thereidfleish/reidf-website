@@ -13,7 +13,7 @@ export default function AboutThisWebsitePage() {
       {/* Tools */}
       <section className="flex flex-col gap-3">
         <h2 className="text-xl font-bold">Tools Used</h2>
-        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+        <p className="text-zinc-700 leading-relaxed">
           This website is built with{" "}
           <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer">Next.js</a> and{" "}
           <a href="https://react.dev" target="_blank" rel="noopener noreferrer">React</a>,
@@ -36,21 +36,22 @@ export default function AboutThisWebsitePage() {
           height={300}
           className="rounded-xl object-cover"
         />
-        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+        <p className="text-zinc-700 leading-relaxed">
           Self-Hosted in Great Neck, NY on The FleishServer.{" "}
           <a href="https://server.reidf.net/" target="_blank" rel="noopener noreferrer">
             Specs and other info
           </a>
         </p>
-        <p className="text-zinc-700 dark:text-zinc-300">
+        <p className="text-zinc-700">
           Visitor Tracker: StatCounter
         </p>
       </section>
 
       {/* Changelog link */}
-      <p className="text-sm text-zinc-500 dark:text-zinc-400">
-        View the <Link href="/changelog" className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 hover:underline transition-colors">Changelog</Link> for version history.
+      <p className="text-sm text-zinc-500">
+        View the <Link href="/changelog" className="text-blue-500 hover:text-blue-700 hover:underline transition-colors">Changelog</Link> for version history.
       </p>
     </div>
   );
 }
+

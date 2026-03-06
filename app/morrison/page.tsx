@@ -157,7 +157,7 @@ export default function MorrisonPage() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold">Morrison Dining</h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
+        <p className="text-zinc-500">
           1 Year In The Life of A Boy Who Wanted To Help Morrison
         </p>
       </div>
@@ -172,10 +172,10 @@ export default function MorrisonPage() {
               className="rounded-xl w-full h-auto max-h-96 object-contain"
             />
             <div className="flex flex-col gap-1">
-              <p className="text-sm font-semibold text-zinc-500 dark:text-zinc-400">
+              <p className="text-sm font-semibold text-zinc-500">
                 {entry.date}
               </p>
-              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-sm">
+              <p className="text-zinc-700 leading-relaxed text-sm">
                 {entry.caption}
               </p>
             </div>
@@ -185,3 +185,4 @@ export default function MorrisonPage() {
     </div>
   );
 }
+

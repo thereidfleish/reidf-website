@@ -26,7 +26,7 @@ export default function VideoList({ videos, limit }: VideoListProps) {
       {!limit && (
         <button
           onClick={() => setNewestFirst((p) => !p)}
-          className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400 self-start"
+          className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 bg-zinc-800 text-zinc-400 self-start"
         >
           {newestFirst ? "Newest First" : "Oldest First"}
         </button>
@@ -39,3 +39,4 @@ export default function VideoList({ videos, limit }: VideoListProps) {
     </div>
   );
 }
+

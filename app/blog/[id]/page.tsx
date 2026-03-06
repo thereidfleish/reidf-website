@@ -27,7 +27,7 @@ export default async function BlogPostPage({
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-1.5">
           <h1 className="text-3xl font-bold">{blog.title}</h1>
-          <span className="text-sm font-semibold text-zinc-500 dark:text-zinc-400">
+          <span className="text-sm font-semibold text-zinc-500">
             {blog.dates}
           </span>
         </div>
@@ -51,10 +51,11 @@ export default async function BlogPostPage({
 
       {/* Closing word */}
       <div className="flex justify-center pt-4">
-        <span className="inline-block px-6 py-3 text-lg font-semibold tracking-widest uppercase border-2 border-zinc-300 dark:border-zinc-600 rounded-xl text-zinc-500 dark:text-zinc-400 select-none">
+        <span className="inline-block px-6 py-3 text-lg font-semibold tracking-widest uppercase border-2 border-zinc-300 rounded-xl text-zinc-500 select-none">
           {blog.closingWord}
         </span>
       </div>
     </div>
   );
 }
+

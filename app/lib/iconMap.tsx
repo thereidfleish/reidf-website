@@ -8,3 +8,4 @@ export const iconMap: Record<NonNullable<LinkIcon>, React.ReactNode> = {
   video: <Video size={14} />,
   paper: <FileText size={14} />,
 };
+

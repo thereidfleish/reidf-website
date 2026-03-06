@@ -9,9 +9,9 @@ export const projectTypeLabels: Record<ProjectType, string> = {
 };
 
 export const projectTypeColors: Record<ProjectType, string> = {
-    software: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-    "engineering-operations": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
-    research: "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
+    software: "bg-blue-100 text-blue-800 bg-blue-900 text-blue-200",
+    "engineering-operations": "bg-amber-100 text-amber-800 bg-amber-900 text-amber-200",
+    research: "bg-teal-100 text-teal-800 bg-teal-900 text-teal-200",
 };
 
 export interface Project {
@@ -234,3 +234,4 @@ export const projects: Project[] = [
         type: "research",
     },
 ];
+

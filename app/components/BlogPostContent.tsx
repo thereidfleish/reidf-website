@@ -3,7 +3,7 @@ import type { BlogBlock } from "../data/blogposts";
 
 function Caption({ text }: { text: string }) {
   return (
-    <p className="text-sm italic text-zinc-500 dark:text-zinc-400 text-center mt-2">
+    <p className="text-sm italic text-zinc-500 text-center mt-2">
       {text}
     </p>
   );
@@ -25,7 +25,7 @@ export default function BlogPostContent({ blocks }: { blocks: BlogBlock[] }) {
             return (
               <div
                 key={i}
-                className="rich-text leading-relaxed text-zinc-700 dark:text-zinc-300"
+                className="rich-text leading-relaxed text-zinc-700"
                 dangerouslySetInnerHTML={{ __html: block.html }}
               />
             );
@@ -78,3 +78,4 @@ export default function BlogPostContent({ blocks }: { blocks: BlogBlock[] }) {
     </div>
   );
 }
+

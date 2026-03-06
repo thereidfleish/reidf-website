@@ -51,9 +51,9 @@ function AccordionItem({
         {name}
       </button>
       {open && (
-        <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed mt-1 max-w-sm text-center">
+        <p className="text-sm text-zinc-700 leading-relaxed mt-1 max-w-sm text-center">
           {description || (
-            <span className="italic text-zinc-400 dark:text-zinc-500">
+            <span className="italic text-zinc-500">
               Coming soon...
             </span>
           )}
@@ -68,7 +68,7 @@ export default function ThankYouPage() {
     <div className="flex flex-col items-center gap-8 text-center">
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-bold">Thank You</h1>
-        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed max-w-xl">
+        <p className="text-zinc-700 leading-relaxed max-w-xl">
           Thank You to everyone listed below. If your name is on this list, that
           means you have had a very meaningful impact on my life — in a good
           way. Some of you have guided me to where I am today, some of you have
@@ -86,3 +86,4 @@ export default function ThankYouPage() {
     </div>
   );
 }
+

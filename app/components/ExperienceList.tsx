@@ -48,7 +48,7 @@ export default function ExperienceList({
   const sortBtn = (
     <button
       onClick={() => setNewestFirst((p) => !p)}
-      className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+      className="text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
     >
       {newestFirst ? "Newest First" : "Oldest First"}
     </button>
@@ -60,7 +60,7 @@ export default function ExperienceList({
       <div className="flex flex-col gap-2">
         {showFilter ? (
           <>
-            <p className="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wide">Filters</p>
+            <p className="text-xs font-medium text-zinc-500 uppercase tracking-wide">Filters</p>
             <div className="flex flex-wrap gap-2 items-center">
               {availableTypes.map((t) => {
                 const isActive = selectedTypes.has(t);
@@ -70,15 +70,15 @@ export default function ExperienceList({
                     onClick={() => toggleType(t)}
                     className={`text-xs font-medium px-3 py-1 rounded-full transition-colors cursor-pointer ${
                       isActive
-                        ? "bg-zinc-800 text-white dark:bg-white dark:text-black"
-                        : "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+                        ? "bg-zinc-800 text-white"
+                        : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
                     }`}
                   >
                     {allTypeLabels[t]}
                   </button>
                 );
               })}
-              <div className="hidden sm:block w-px h-5 bg-zinc-200 dark:bg-zinc-700 mx-1 self-center" />
+              <div className="hidden sm:block w-px h-5 bg-zinc-200 mx-1 self-center" />
               {sortBtn}
             </div>
           </>
@@ -100,3 +100,4 @@ export default function ExperienceList({
     </div>
   );
 }
+

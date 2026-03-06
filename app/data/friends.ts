@@ -22,3 +22,4 @@ export const friends: Friend[] = [
     url: "https://jonathanjma.github.io/",
   },
 ];
+

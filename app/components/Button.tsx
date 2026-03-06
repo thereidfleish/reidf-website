@@ -21,15 +21,15 @@ interface ButtonProps {
 
 const colorVariantClasses: Record<Colorset, Record<Variant, string>> = {
   primary: {
-    solid: "bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-400",
+    solid: "bg-blue-500 text-white hover:bg-blue-600",
     outline:
-      "border border-blue-600 text-black hover:bg-blue-50 dark:text-white dark:hover:bg-blue-950",
+      "border border-blue-600 text-blue-600 hover:bg-blue-50",
   },
   secondary: {
     solid:
-      "bg-white text-black border border-zinc-200 hover:bg-zinc-100 dark:bg-zinc-800 dark:text-white dark:border-zinc-700 dark:hover:bg-zinc-700",
+      "bg-white text-black border border-zinc-200 hover:bg-zinc-100",
     outline:
-      "border border-zinc-400 text-black hover:bg-zinc-100 dark:border-zinc-500 dark:text-white dark:hover:bg-zinc-800",
+      "border border-zinc-400 text-zinc-700 hover:bg-zinc-100",
   },
 };
 
@@ -84,3 +84,4 @@ export default function Button({
     </button>
   );
 }
+

@@ -8,8 +8,8 @@ export default function ProjectsPage() {
       <ExperienceList
         experiences={projects}
         showTypeFilter={true}
-        hint="Click on a project title to learn more"
       />
     </div>
   );
 }
+

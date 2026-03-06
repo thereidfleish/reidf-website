@@ -11,13 +11,6 @@
   --font-sans: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -31,16 +24,6 @@ a:not([class]) {
 
 a:not([class]):hover {
   color: #1d4ed8;
-}
-
-@media (prefers-color-scheme: dark) {
-  a:not([class]) {
-    color: #60a5fa;
-  }
-
-  a:not([class]):hover {
-    color: #93c5fd;
-  }
 }
 
 .page-container {
@@ -70,7 +53,3 @@ nav a:hover {
 .rich-text ol { list-style: decimal; padding-left: 1.25rem; margin-top: 0.25rem; }
 .rich-text li { margin-bottom: 0.125rem; }
 .rich-text p + p { margin-top: 0.5rem; }
-@media (prefers-color-scheme: dark) {
-  .rich-text a { color: #60a5fa; }
-  .rich-text a:hover { color: #93c5fd; }
-}

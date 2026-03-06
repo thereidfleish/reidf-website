@@ -39,14 +39,14 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
               ) : title}
             </h3>
             {position && (
-              <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+              <p className="text-sm font-medium text-zinc-600">
                 {position}
               </p>
             )}
           </div>
 
           {/* Dates + location */}
-          <div className="flex flex-col sm:items-end shrink-0 text-sm text-zinc-500 dark:text-zinc-400">
+          <div className="flex flex-col sm:items-end shrink-0 text-sm text-zinc-500">
             <span className="font-medium sm:font-semibold">{dates}</span>
             {location && <span className="font-medium mt-1 sm:mt-2">{location}</span>}
           </div>
@@ -54,10 +54,10 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
 
         {description && (
           <div
-            className="rich-text text-sm leading-relaxed text-zinc-700 dark:text-zinc-300"
+            className="rich-text text-sm leading-relaxed text-zinc-700"
             dangerouslySetInnerHTML={{
               __html: titleUrl?.startsWith("/")
-                ? description + ` <a href="${titleUrl}" class="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 hover:underline transition-colors">Read more →</a>`
+                ? description + ` <a href="${titleUrl}" class="text-blue-500 hover:text-blue-700 hover:underline transition-colors">Read more →</a>`
                 : description,
             }}
           />
@@ -68,3 +68,4 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
     </div>
   );
 }
+

@@ -5,7 +5,7 @@ export const metadata = { title: "sbpin" };
 export default function SbpinPage() {
   return (
     <div className="flex flex-col gap-6 max-w-2xl">
-      <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+      <p className="text-zinc-700 leading-relaxed">
         Now there is one way to know what my pin is…but you&apos;re running out
         of time{" "}
         <Link href="/sbpin/time/">⏰</Link>
@@ -16,3 +16,4 @@ export default function SbpinPage() {
     </div>
   );
 }
+

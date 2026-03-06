@@ -14,11 +14,11 @@ export const typeLabels: Record<ExperienceType, string> = {
 };
 
 export const typeColors: Record<ExperienceType, string> = {
-  "full-time": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-  "part-time": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200",
-  internship: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-  extracurricular: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-  project: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+  "full-time": "bg-blue-100 text-blue-800 bg-blue-900 text-blue-200",
+  "part-time": "bg-sky-100 text-sky-800 bg-sky-900 text-sky-200",
+  internship: "bg-green-100 text-green-800 bg-green-900 text-green-200",
+  extracurricular: "bg-purple-100 text-purple-800 bg-purple-900 text-purple-200",
+  project: "bg-orange-100 text-orange-800 bg-orange-900 text-orange-200",
 };
 
 export type LinkIcon = "github" | "globe" | "external" | "video" | "paper";
@@ -385,3 +385,4 @@ export const experiences: Experience[] = [
     type: "extracurricular",
   },
 ];
+

@@ -7,7 +7,7 @@ export default function Eden9MonthsPage() {
     <div className="flex flex-col items-center gap-8 text-center max-w-2xl mx-auto">
       <h1 className="text-3xl font-bold">Eden 9 Months</h1>
 
-      <h3 className="text-md font-semibold text-zinc-600 dark:text-zinc-400">
+      <h3 className="text-md font-semibold text-zinc-600">
         At the end of this countdown, you will have submitted your ED
         application! Woo hoo! And...you shall get a surprise from me...check
         back here at precisely 12:00 AM, 11/2/21...
@@ -26,3 +26,4 @@ export default function Eden9MonthsPage() {
     </div>
   );
 }
+

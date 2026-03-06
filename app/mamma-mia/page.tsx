@@ -31,13 +31,13 @@ export default function MammaMiaPage() {
     <div className="flex flex-col gap-8 max-w-2xl">
       <div className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold">Mamma Mia</h1>
-        <p className="text-zinc-500 dark:text-zinc-400 italic">
+        <p className="text-zinc-500 italic">
           I enjoyed the musical so much that I figured I&apos;d make a webpage
           dedicated to it...
         </p>
       </div>
 
-      <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+      <p className="text-zinc-700 leading-relaxed">
         <em>
           The following are video/audio footage of the SHS Mamma Mia musical in
           November 2019. All of this was recorded by GNPS/TV and all credit goes
@@ -90,3 +90,4 @@ export default function MammaMiaPage() {
     </div>
   );
 }
+

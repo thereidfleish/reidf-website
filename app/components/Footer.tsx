@@ -1,34 +1,19 @@
 import Link from "next/link";
-import Script from "next/script";
 import { versions } from "../data/changelog";
+import StatCounter from "./StatCounter";
 
-const LINK_CLASS = "text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors underline-offset-2 hover:underline";
+const LINK_CLASS = "text-blue-500 hover:text-blue-700 transition-colors underline-offset-2 hover:underline";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   const latest = versions[0];
 
   return (
-    <footer className="border-t border-zinc-200 dark:border-zinc-800 mt-4">
-      {/* Default Statcounter code for Reidf.net https://reidf.net */}
-      <Script
-        id="statcounter-vars"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-var sc_project=12106690;
-var sc_invisible=0;
-var sc_security="458e529a";
-var sc_text=2;
-          `,
-        }}
-      />
-      <Script
-        src="https://statcounter.com/counter/counter.js"
-        strategy="afterInteractive"
-      />
-      {/* End of Statcounter Code */}
-      <div className="page-container py-8 flex flex-col items-center gap-5 text-sm text-zinc-500 dark:text-zinc-400 text-center">
+    <footer className="border-t border-zinc-200 mt-4">
+      <div className="page-container py-8 flex flex-col items-center gap-5 text-sm text-zinc-500 text-center">
+        <p>
+          Thanks for being one of the <StatCounter /> visitors to my website!
+        </p>
         <p className="leading-6">
           © {year} Reid Fleishman<br />
           <a href="mailto:reidfleishman5@gmail.com" className={LINK_CLASS}>reidfleishman5@gmail.com</a><br />
@@ -57,3 +42,4 @@ var sc_text=2;
     </footer>
   );
 }
+

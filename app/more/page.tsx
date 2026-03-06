@@ -25,10 +25,10 @@ export default function MorePage() {
               href={friend.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col gap-0.5 p-4 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              className="flex flex-col gap-0.5 p-4 rounded-lg bg-zinc-50 hover:bg-zinc-100 transition-colors"
             >
               <span className="font-semibold text-base">{friend.name}</span>
-              <span className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">
+              <span className="text-xs text-zinc-500 mt-0.5">
                 {friend.url}
               </span>
             </a>
@@ -38,3 +38,4 @@ export default function MorePage() {
     </div>
   );
 }
+

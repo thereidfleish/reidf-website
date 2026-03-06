@@ -22,3 +22,4 @@ export default function LinkButtons({ links }: { links?: ExperienceLink[] }) {
     </div>
   );
 }
+

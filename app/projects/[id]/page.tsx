@@ -35,11 +35,11 @@ export default async function ProjectDetailPage({
         <div className="flex flex-col gap-1.5">
           <h1 className="text-2xl font-bold leading-none">{project.title}</h1>
           {project.position && (
-            <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm font-medium text-zinc-600">
               {project.position}
             </p>
           )}
-          <div className="flex flex-col text-sm text-zinc-500 dark:text-zinc-400">
+          <div className="flex flex-col text-sm text-zinc-500">
             <span className="font-semibold">{project.dates}</span>
             {project.location && <span className="mt-1">{project.location}</span>}
           </div>
@@ -55,7 +55,7 @@ export default async function ProjectDetailPage({
 
           {project.description && (
             <div
-              className="rich-text text-sm leading-relaxed text-zinc-700 dark:text-zinc-300"
+              className="rich-text text-sm leading-relaxed text-zinc-700"
               dangerouslySetInnerHTML={{ __html: project.description }}
             />
           )}
@@ -69,7 +69,7 @@ export default async function ProjectDetailPage({
 
           {detail?.longDescription && (
             <div
-              className="rich-text leading-relaxed text-zinc-700 dark:text-zinc-300"
+              className="rich-text leading-relaxed text-zinc-700"
               dangerouslySetInnerHTML={{ __html: detail.longDescription }}
             />
           )}
@@ -85,3 +85,4 @@ export default async function ProjectDetailPage({
     </div>
   );
 }
+

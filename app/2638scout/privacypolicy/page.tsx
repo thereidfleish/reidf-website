@@ -257,3 +257,4 @@ export default function Scout2638PrivacyPolicyPage() {
     </PrivacyPolicyLayout>
   );
 }
+

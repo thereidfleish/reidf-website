@@ -236,3 +236,4 @@ export default function Stickers2638PrivacyPolicyPage() {
     </PrivacyPolicyLayout>
   );
 }
+
