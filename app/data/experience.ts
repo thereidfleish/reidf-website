@@ -45,15 +45,28 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "apple",
+    image: "/logos/apple.jpg",
+    title: "Apple",
+    position: "Software Engineer",
+    dates: "Apr 2026 - Present",
+    description:
+    `iCloud Mail, Contacts, and Calendar`,
+    // techStack: ["React", "SwiftUI", "UIKit", "Kotlin", "React"],
+    location: "🏖️ San Diego, CA",
+    titleUrl: "https://www.apple.com",
+    type: "full-time",
+  },
+  {
     id: "compass",
     image: "/logos/compass.jpg",
     title: "Compass",
-    position: "iOS Engineer",
-    dates: "Jan 2026 - Present",
+    position: "iOS and Android Engineer",
+    dates: "Jan 2026 - Apr 2026",
     description:
     `<ul>
-      <li>Developing core features across agent &amp; client tools, including re-tooling universal links and push notifications to support a major acquisition</li>
-      <li>Improved internal software catalog tool by integrating multiple data sources to help engineers find ownership of services</li>
+      <li>Developed core features across agent & client tools, including white-labeling, universal links, and push notifications to support a major acquisition</li>
+      <li>Revamped internal software catalog tool by integrating multiple data sources to help engineers find ownership of services</li>
     </ul>`,
     techStack: ["Swift", "SwiftUI", "UIKit", "Kotlin", "React"],
     location: "🗽 New York, NY",
@@ -96,7 +109,7 @@ export const experiences: Experience[] = [
     titleUrl: "https://cornelllifted.com/",
     links: [
       { url: "https://cornelllifted.com/", label: "Web App", icon: "globe" },
-      { url: "https://github.com/thereidfleish/cornell-lifted", label: "GitHub", icon: "github" },
+      // { url: "https://github.com/thereidfleish/cornell-lifted", label: "GitHub", icon: "github" },
     ],
     type: "extracurricular",
   },

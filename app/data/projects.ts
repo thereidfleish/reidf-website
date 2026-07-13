@@ -34,7 +34,7 @@ export const projects: Project[] = [
         image: experiences.find((e) => e.id === "lifted")!.image,
         title: "Cornell Lifted",
         dates: "Apr 2024 - Present",
-        description: "Over the course of my senior year, I led two peer-to-peer gratitude events with 7,500+ participants.  Lifted is a beloved tradition at Cornell, and I led a team to take this event to the next level.  As part of this initiative, I built a full-stack web app to facilitate the event and automate repetitive processes (e.g., emails, PDF conversion), which has saved us dozens of hours and eliminated countless errors from previous manual processes.  The site currently sees approximately 7,500+ active users each year.  Although I have graduated, I still maintain the web app and assist with the event planning each year.",
+        description: "Over the course of my senior year, I led two peer-to-peer gratitude events with over 10,000+ participants.  Lifted is a beloved tradition at Cornell, and I led a team to take this event to the next level.  As part of this initiative, I built a full-stack web app to facilitate the event and automate repetitive processes (e.g., emails, PDF conversion), which has saved us dozens of hours and eliminated countless errors from previous manual processes.  The site currently sees approximately 7,500+ active users each year.  Although I have graduated, I still help with the event planning and execution each semester.",
         techStack: experiences.find((e) => e.id === "lifted")!.techStack,
         links: experiences.find((e) => e.id === "lifted")!.links,
         titleUrl: "/projects/lifted",

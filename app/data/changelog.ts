@@ -8,6 +8,11 @@ export interface Version {
 
 export const versions: Version[] = [
   {
+    version: "4.0.1",
+    date: "7/11/26",
+    changes: ["Updated various content throughout the website"],
+  },
+  {
     version: "4.0",
     date: "3/5/26",
     changes: [

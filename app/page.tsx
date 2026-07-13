@@ -22,17 +22,17 @@ export default function Home() {
         {/* Right column - bio text + buttons */}
         <div className="flex flex-col gap-4">
           <p className="text-lg leading-relaxed text-zinc-700">
-            I'm passionate about creatively applying my skills in iOS and full-stack web development, IT, and more to delight users, improve processes, and empower a team.  I'm both a leader and independent contributor who is observant, dedicated, and not afraid to take risks to make our world a better place.
+            I'm passionate about creatively applying my skills in iOS, full-stack web development, and more to delight users, improve processes, and empower a team.  I'm both a leader and independent contributor who is observant, dedicated, and not afraid to take risks to make our world a better place.
           </p>
           <p className="text-lg leading-relaxed text-zinc-700">
-            I've had numerous experiences and worked on many projects, and I invite you to explore them throughout my website!
+            I've had numerous experiences designing and developing apps, automating processes, and leading teams to make impactful change, and I invite you to explore them throughout my website!
           </p>
           <p className="text-lg leading-relaxed text-zinc-700">
-            I graduated from Cornell University in 2025 with a BS in Information Science and am currently an iOS Engineer at <a href="https://www.compass.com/">Compass</a>.
+            I graduated from Cornell University in 2025 with a BS in Information Science and am currently a Software Engineer at <a href="https://www.apple.com/">Apple</a>.
           </p>
           <div className="flex gap-4 mt-2 justify-center md:justify-start">
             <Button
-                href="/home/resumes/Reid_Fleishman_Resume_SP26.pdf"
+                href="/home/resumes/Reid_Fleishman_Resume_S26.pdf"
                 external
                 colorset="secondary"
                 size="lg"
